@@ -11,4 +11,12 @@ stdio.h
 -
 stdlib.h
 -
+signal.h
+-
+time.h
+-
+ctype.h
+-
+string.h
+-
 
