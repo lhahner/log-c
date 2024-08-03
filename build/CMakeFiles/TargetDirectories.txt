@@ -1,0 +1,3 @@
+/mnt/c/Users/lennart.hahner/Nextcloud/e-learning/C/src/cla-collection/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/lennart.hahner/Nextcloud/e-learning/C/src/cla-collection/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/lennart.hahner/Nextcloud/e-learning/C/src/cla-collection/build/CMakeFiles/logger.dir

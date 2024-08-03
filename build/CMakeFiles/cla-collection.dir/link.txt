@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/cla-collection.dir/cla-collection.c.o -o cla-collection 
