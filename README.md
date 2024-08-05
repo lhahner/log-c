@@ -1,9 +1,9 @@
 # cla-collection
 This is a collection of programs for cross-cutting concerns in C. This means all these programs should handle expected functionalities as logging, error-handling or other. 
 ## Files and streams
-- files vs. streams,
-- header files needed for stream operations,
-- FILE structure,
+- *files vs. streams*: Files are stored data which is physically written on the disk, while streams are just runtime values stored in a variable.
+- *header files needed* for stream operations: One is <stdio.h> other useful are <stdlib.h> or <signal.h> for general thing.
+- *FILE structure*: The FILE struct is the actual file that should be created.
 - opening and closing a stream, open modes, errno variable,
 - reading and writing to/from a stream,
 - predefined streams: stdin, stdout and stderr,
