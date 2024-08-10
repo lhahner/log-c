@@ -26,6 +26,6 @@ The Road-Map below is [CLA-Associate ]{https://cppinstitute.org/cla}
 - analyzing and creating complex declarations.
 
 ## Ideas & Todos for this codebase
-1. Encryption: Vignere & Caesar
+1. Encryption: Vignere & Caesar, check `cryptlib`
 2. Wifi Program, list connections: Libary `Network Manager`
 3. Write a preprocessor file
