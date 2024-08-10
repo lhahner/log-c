@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/lennart/Dev/cla-collection/build",
+  "command": "/usr/bin/cc   -g   -o CMakeFiles/replacer.dir/src/replacer.c.o   -c /home/lennart/Dev/cla-collection/src/replacer.c",
+  "file": "/home/lennart/Dev/cla-collection/src/replacer.c"
+}
+]

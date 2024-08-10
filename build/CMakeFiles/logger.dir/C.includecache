@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/lennart.hahner/Nextcloud/e-learning/C/src/cla-collection/src/logger.c
+/home/lennart/Nextcloud/dev/cla-collection/includes/libs.h
 stdio.h
 -
 stdlib.h
@@ -19,4 +19,14 @@ ctype.h
 -
 string.h
 -
+
+/home/lennart/Nextcloud/dev/cla-collection/includes/loggerlib.h
+./libs.h
+/home/lennart/Nextcloud/dev/cla-collection/includes/libs.h
+
+/home/lennart/Nextcloud/dev/cla-collection/src/logger.c
+../includes/libs.h
+/home/lennart/Nextcloud/dev/cla-collection/includes/libs.h
+../includes/loggerlib.h
+/home/lennart/Nextcloud/dev/cla-collection/includes/loggerlib.h
 

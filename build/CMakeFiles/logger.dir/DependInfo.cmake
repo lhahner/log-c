@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/mnt/c/Users/lennart.hahner/Nextcloud/e-learning/C/src/cla-collection/src/logger.c" "/mnt/c/Users/lennart.hahner/Nextcloud/e-learning/C/src/cla-collection/build/CMakeFiles/logger.dir/src/logger.c.o"
+  "/home/lennart/Nextcloud/dev/cla-collection/src/logger.c" "/home/lennart/Nextcloud/dev/cla-collection/build/CMakeFiles/logger.dir/src/logger.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
