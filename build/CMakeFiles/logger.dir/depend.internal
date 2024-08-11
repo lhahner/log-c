@@ -4,4 +4,9 @@
 CMakeFiles/logger.dir/src/logger.c.o
  /home/lennart/Nextcloud/dev/cla-collection/includes/libs.h
  /home/lennart/Nextcloud/dev/cla-collection/includes/loggerlib.h
+ /home/lennart/Nextcloud/dev/cla-collection/includes/replacer.h
  /home/lennart/Nextcloud/dev/cla-collection/src/logger.c
+CMakeFiles/logger.dir/src/replacer.c.o
+ /home/lennart/Nextcloud/dev/cla-collection/includes/libs.h
+ /home/lennart/Nextcloud/dev/cla-collection/includes/replacer.h
+ /home/lennart/Nextcloud/dev/cla-collection/src/replacer.c

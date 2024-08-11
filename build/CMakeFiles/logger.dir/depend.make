@@ -3,5 +3,10 @@
 
 CMakeFiles/logger.dir/src/logger.c.o: ../includes/libs.h
 CMakeFiles/logger.dir/src/logger.c.o: ../includes/loggerlib.h
+CMakeFiles/logger.dir/src/logger.c.o: ../includes/replacer.h
 CMakeFiles/logger.dir/src/logger.c.o: ../src/logger.c
+
+CMakeFiles/logger.dir/src/replacer.c.o: ../includes/libs.h
+CMakeFiles/logger.dir/src/replacer.c.o: ../includes/replacer.h
+CMakeFiles/logger.dir/src/replacer.c.o: ../src/replacer.c
 

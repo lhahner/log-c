@@ -150,6 +150,33 @@ src/logger.c.s:
 	$(MAKE) -f CMakeFiles/logger.dir/build.make CMakeFiles/logger.dir/src/logger.c.s
 .PHONY : src/logger.c.s
 
+src/replacer.o: src/replacer.c.o
+
+.PHONY : src/replacer.o
+
+# target to build an object file
+src/replacer.c.o:
+	$(MAKE) -f CMakeFiles/logger.dir/build.make CMakeFiles/logger.dir/src/replacer.c.o
+.PHONY : src/replacer.c.o
+
+src/replacer.i: src/replacer.c.i
+
+.PHONY : src/replacer.i
+
+# target to preprocess a source file
+src/replacer.c.i:
+	$(MAKE) -f CMakeFiles/logger.dir/build.make CMakeFiles/logger.dir/src/replacer.c.i
+.PHONY : src/replacer.c.i
+
+src/replacer.s: src/replacer.c.s
+
+.PHONY : src/replacer.s
+
+# target to generate assembly for a file
+src/replacer.c.s:
+	$(MAKE) -f CMakeFiles/logger.dir/build.make CMakeFiles/logger.dir/src/replacer.c.s
+.PHONY : src/replacer.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +189,9 @@ help:
 	@echo "... src/logger.o"
 	@echo "... src/logger.i"
 	@echo "... src/logger.s"
+	@echo "... src/replacer.o"
+	@echo "... src/replacer.i"
+	@echo "... src/replacer.s"
 .PHONY : help
 
 

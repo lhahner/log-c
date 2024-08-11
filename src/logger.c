@@ -9,8 +9,9 @@
  * @author Lennart Hahner
  * @version 1.0
  * **********************************************************************/
-#include "../includes/libs.h";
-#include "../includes/loggerlib.h";
+#include "../includes/libs.h"
+#include "../includes/loggerlib.h"
+#include "../includes/replacer.h"
 
 char buffer[BUFSIZ];
 FILE *fptr;
@@ -48,16 +49,16 @@ char *formatLogLine(char *message_type, char *message)
     int i = 0;
 
     time_t rawtime = time(NULL);
-    // currently this string contains \n at the end, which I want to replace with " "
-    // use-case for repalcer.c
+
+    // use-case for replacer.c
     char *time = asctime(gmtime(&rawtime));
+    time = replace('\n', ' ', time);
 
     // 0 -> "2", 1 -> "0", 2 -> ":", 3 -> "5", 4 -> "3"
     for (; i < strlen(time); i++)
     {
         log_line[i] = time[i];
     }
-    // i = 4
 
     if (message_type != NULL)
     {
@@ -82,15 +83,9 @@ char *formatLogLine(char *message_type, char *message)
 
     if (message != NULL)
     {
-
-        log_line[i] = ' ';
-        i++;
-        log_line[i] = '-';
-        i++;
-        log_line[i] = '-';
-        i++;
-        log_line[i] = ' ';
-        i++;
+        char *seperator = " -- ";
+        strcat(log_line, " -- ");
+        i = i + (strlen(" -- "));
 
         for (int j = 0; j < strlen(message); j++)
         {
@@ -107,7 +102,7 @@ char *formatLogLine(char *message_type, char *message)
     return log_line;
 }
 
-int log2buffer(FILE *file, char stream)
+int log2buffer(FILE *file, char *stream)
 {
     if (stream == NULL)
     {

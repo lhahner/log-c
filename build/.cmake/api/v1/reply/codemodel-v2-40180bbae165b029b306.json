@@ -37,9 +37,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "replacer::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-replacer-Debug-8e986a461d6649a78a73.json",
-					"name" : "replacer",
+					"id" : "logger::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-logger-Debug-ada255201ed0b600c834.json",
+					"name" : "logger",
 					"projectIndex" : 0
 				}
 			]
@@ -48,8 +48,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/lennart/Dev/cla-collection/build",
-		"source" : "/home/lennart/Dev/cla-collection"
+		"build" : "/home/lennart/Nextcloud/dev/cla-collection/build",
+		"source" : "/home/lennart/Nextcloud/dev/cla-collection"
 	},
 	"version" : 
 	{

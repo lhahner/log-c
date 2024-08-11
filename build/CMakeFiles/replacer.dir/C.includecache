@@ -19,20 +19,14 @@ ctype.h
 -
 string.h
 -
-./replacer.h
-/home/lennart/Nextcloud/dev/cla-collection/includes/replacer.h
-
-/home/lennart/Nextcloud/dev/cla-collection/includes/loggerlib.h
-./libs.h
-/home/lennart/Nextcloud/dev/cla-collection/includes/libs.h
 
 /home/lennart/Nextcloud/dev/cla-collection/includes/replacer.h
 
-/home/lennart/Nextcloud/dev/cla-collection/src/logger.c
+/home/lennart/Nextcloud/dev/cla-collection/src/replacer.c
 ../includes/libs.h
 /home/lennart/Nextcloud/dev/cla-collection/includes/libs.h
-../includes/loggerlib.h
-/home/lennart/Nextcloud/dev/cla-collection/includes/loggerlib.h
+regex.h
+/home/lennart/Nextcloud/dev/cla-collection/src/regex.h
 ../includes/replacer.h
 /home/lennart/Nextcloud/dev/cla-collection/includes/replacer.h
 
