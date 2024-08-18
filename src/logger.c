@@ -17,6 +17,11 @@ char buffer[BUFSIZ];
 FILE *fptr;
 sig_atomic_t sig = 0;
 
+/**
+ * Signal handling if detected.
+ *
+ * @return exits program
+ */
 int signal_handler()
 {
     sig = 1;
@@ -27,9 +32,16 @@ int signal_handler()
 // a stream is just a contious stream of characters
 int main(int *argc, int *argv)
 {
-    char *log = formatLogLine("[Error]", "Not allowed here, aborting.");
+    log2File("Compliation Error, Aborting...");
 }
 
+/**
+ * This function calls the default formatter
+ * and writes the output to the log file.
+ * Which resides at: './res/error.log'.
+ *
+ * @param stream which is provided by the user.
+ */
 void log2File(char *stream)
 {
     if (stream == NULL)
@@ -38,10 +50,22 @@ void log2File(char *stream)
     }
     else
     {
-        fputs(stream, fptr);
+        fptr = fopen("../res/error.log", "w+");
+        const char *logline = formatLogLine("[ERROR]", stream);
+        fputs(logline, fptr);
+        fclose(fptr);
     }
 }
 
+/**
+ * This method will format a string, that will be the final input in the Log
+ * File or in the command line. This method is used by default, if the user
+ * is not providing any custom attachments in the .xml file.
+ *
+ * @param message_type the output type, e.g.: INFO, ERROR or WARING
+ * @param message the output message specified by the user
+ * @return formatted log string which consitst of message type, message and date.
+ */
 char *formatLogLine(char *message_type, char *message)
 {
     // Format -> [<message_type>] -- <message>
@@ -100,15 +124,4 @@ char *formatLogLine(char *message_type, char *message)
     }
 
     return log_line;
-}
-
-int log2buffer(FILE *file, char *stream)
-{
-    if (stream == NULL)
-    {
-        raise(SIGABRT);
-        return 1;
-    }
-    setbuf(file, stream);
-    return 0;
 }
