@@ -1,5 +1,7 @@
 {
   "files.associations": {
-    "regex.h": "c"
-  }
+    "regex.h": "c",
+    "parser.h": "c"
+  },
+  "C_Cpp.errorSquiggles": "enabled"
 }

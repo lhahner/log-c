@@ -37,9 +37,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "logger::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-logger-Debug-ada255201ed0b600c834.json",
-					"name" : "logger",
+					"id" : "readconfig::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-readconfig-Debug-880e9e6b2de7ba625453.json",
+					"name" : "readconfig",
 					"projectIndex" : 0
 				}
 			]

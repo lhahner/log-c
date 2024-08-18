@@ -30,10 +30,10 @@ int signal_handler()
 }
 
 // a stream is just a contious stream of characters
-int main(int *argc, int *argv)
-{
-    log2File("Compliation Error, Aborting...");
-}
+// int main(int *argc, int *argv)
+// {
+//     log2File("Compliation Error, Aborting...");
+// }
 
 /**
  * This function calls the default formatter

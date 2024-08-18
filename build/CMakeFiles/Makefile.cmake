@@ -24,6 +24,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.16/Modules/Compiler/GNU-C.cmake"
   "/usr/share/cmake-3.16/Modules/Compiler/GNU-CXX.cmake"
   "/usr/share/cmake-3.16/Modules/Compiler/GNU.cmake"
+  "/usr/share/cmake-3.16/Modules/FindLibXml2.cmake"
+  "/usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake"
+  "/usr/share/cmake-3.16/Modules/FindPackageMessage.cmake"
+  "/usr/share/cmake-3.16/Modules/FindPkgConfig.cmake"
   "/usr/share/cmake-3.16/Modules/Internal/CMakeCheckCompilerFlag.cmake"
   "/usr/share/cmake-3.16/Modules/Platform/Linux-GNU-C.cmake"
   "/usr/share/cmake-3.16/Modules/Platform/Linux-GNU-CXX.cmake"
@@ -45,5 +49,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/logger.dir/DependInfo.cmake"
+  "CMakeFiles/readconfig.dir/DependInfo.cmake"
   )

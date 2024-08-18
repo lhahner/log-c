@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/logger.dir/src/logger.c.o CMakeFiles/logger.dir/src/replacer.c.o  -o logger 
+/usr/bin/cc -g   CMakeFiles/logger.dir/src/logger.c.o CMakeFiles/logger.dir/src/replacer.c.o CMakeFiles/logger.dir/src/readconfig.c.o  -o logger 

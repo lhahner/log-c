@@ -8,6 +8,7 @@
  * @version 1.0
  * **********************************************************************/
 #include "../includes/libs.h"
+#include <libxml2/libxml/xmlversion.h>
 
 FILE *fconfig;
 char fbuf[BUFSIZ];
@@ -16,6 +17,7 @@ int config2buffer();
 
 int main(int *argc, int *argv)
 {
+    config2buffer();
 }
 
 /**
@@ -35,5 +37,10 @@ int config2buffer()
     }
     else
     {
+        char *tmp = malloc(sizeof(BUFSIZ));
+        while (fgets(tmp, sizeof(BUFSIZ), fconfig))
+        {
+            strcat(fbuf, tmp);
+        }
     }
 }

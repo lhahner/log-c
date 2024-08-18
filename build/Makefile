@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/lennart/Nextcloud/dev/cla-collection/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named logger
+# Target rules for targets named readconfig
 
 # Build rule for target.
-logger: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 logger
-.PHONY : logger
+readconfig: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 readconfig
+.PHONY : readconfig
 
 # fast build rule for target.
-logger/fast:
-	$(MAKE) -f CMakeFiles/logger.dir/build.make CMakeFiles/logger.dir/build
-.PHONY : logger/fast
+readconfig/fast:
+	$(MAKE) -f CMakeFiles/readconfig.dir/build.make CMakeFiles/readconfig.dir/build
+.PHONY : readconfig/fast
 
 src/logger.o: src/logger.c.o
 
@@ -129,7 +129,7 @@ src/logger.o: src/logger.c.o
 
 # target to build an object file
 src/logger.c.o:
-	$(MAKE) -f CMakeFiles/logger.dir/build.make CMakeFiles/logger.dir/src/logger.c.o
+	$(MAKE) -f CMakeFiles/readconfig.dir/build.make CMakeFiles/readconfig.dir/src/logger.c.o
 .PHONY : src/logger.c.o
 
 src/logger.i: src/logger.c.i
@@ -138,7 +138,7 @@ src/logger.i: src/logger.c.i
 
 # target to preprocess a source file
 src/logger.c.i:
-	$(MAKE) -f CMakeFiles/logger.dir/build.make CMakeFiles/logger.dir/src/logger.c.i
+	$(MAKE) -f CMakeFiles/readconfig.dir/build.make CMakeFiles/readconfig.dir/src/logger.c.i
 .PHONY : src/logger.c.i
 
 src/logger.s: src/logger.c.s
@@ -147,8 +147,35 @@ src/logger.s: src/logger.c.s
 
 # target to generate assembly for a file
 src/logger.c.s:
-	$(MAKE) -f CMakeFiles/logger.dir/build.make CMakeFiles/logger.dir/src/logger.c.s
+	$(MAKE) -f CMakeFiles/readconfig.dir/build.make CMakeFiles/readconfig.dir/src/logger.c.s
 .PHONY : src/logger.c.s
+
+src/readconfig.o: src/readconfig.c.o
+
+.PHONY : src/readconfig.o
+
+# target to build an object file
+src/readconfig.c.o:
+	$(MAKE) -f CMakeFiles/readconfig.dir/build.make CMakeFiles/readconfig.dir/src/readconfig.c.o
+.PHONY : src/readconfig.c.o
+
+src/readconfig.i: src/readconfig.c.i
+
+.PHONY : src/readconfig.i
+
+# target to preprocess a source file
+src/readconfig.c.i:
+	$(MAKE) -f CMakeFiles/readconfig.dir/build.make CMakeFiles/readconfig.dir/src/readconfig.c.i
+.PHONY : src/readconfig.c.i
+
+src/readconfig.s: src/readconfig.c.s
+
+.PHONY : src/readconfig.s
+
+# target to generate assembly for a file
+src/readconfig.c.s:
+	$(MAKE) -f CMakeFiles/readconfig.dir/build.make CMakeFiles/readconfig.dir/src/readconfig.c.s
+.PHONY : src/readconfig.c.s
 
 src/replacer.o: src/replacer.c.o
 
@@ -156,7 +183,7 @@ src/replacer.o: src/replacer.c.o
 
 # target to build an object file
 src/replacer.c.o:
-	$(MAKE) -f CMakeFiles/logger.dir/build.make CMakeFiles/logger.dir/src/replacer.c.o
+	$(MAKE) -f CMakeFiles/readconfig.dir/build.make CMakeFiles/readconfig.dir/src/replacer.c.o
 .PHONY : src/replacer.c.o
 
 src/replacer.i: src/replacer.c.i
@@ -165,7 +192,7 @@ src/replacer.i: src/replacer.c.i
 
 # target to preprocess a source file
 src/replacer.c.i:
-	$(MAKE) -f CMakeFiles/logger.dir/build.make CMakeFiles/logger.dir/src/replacer.c.i
+	$(MAKE) -f CMakeFiles/readconfig.dir/build.make CMakeFiles/readconfig.dir/src/replacer.c.i
 .PHONY : src/replacer.c.i
 
 src/replacer.s: src/replacer.c.s
@@ -174,7 +201,7 @@ src/replacer.s: src/replacer.c.s
 
 # target to generate assembly for a file
 src/replacer.c.s:
-	$(MAKE) -f CMakeFiles/logger.dir/build.make CMakeFiles/logger.dir/src/replacer.c.s
+	$(MAKE) -f CMakeFiles/readconfig.dir/build.make CMakeFiles/readconfig.dir/src/replacer.c.s
 .PHONY : src/replacer.c.s
 
 # Help Target
@@ -183,12 +210,15 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... logger"
+	@echo "... rebuild_cache"
+	@echo "... readconfig"
 	@echo "... src/logger.o"
 	@echo "... src/logger.i"
 	@echo "... src/logger.s"
+	@echo "... src/readconfig.o"
+	@echo "... src/readconfig.i"
+	@echo "... src/readconfig.s"
 	@echo "... src/replacer.o"
 	@echo "... src/replacer.i"
 	@echo "... src/replacer.s"

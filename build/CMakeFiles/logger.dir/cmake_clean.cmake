@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/logger.dir/src/logger.c.o"
+  "CMakeFiles/logger.dir/src/readconfig.c.o"
   "CMakeFiles/logger.dir/src/replacer.c.o"
   "logger"
   "logger.pdb"

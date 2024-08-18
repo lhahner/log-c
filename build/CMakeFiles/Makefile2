@@ -53,7 +53,7 @@ CMAKE_BINARY_DIR = /home/lennart/Nextcloud/dev/cla-collection/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/logger.dir/all
+all: CMakeFiles/readconfig.dir/all
 
 .PHONY : all
 
@@ -63,36 +63,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/logger.dir/clean
+clean: CMakeFiles/readconfig.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/logger.dir
+# Target rules for target CMakeFiles/readconfig.dir
 
 # All Build rule for target.
-CMakeFiles/logger.dir/all:
-	$(MAKE) -f CMakeFiles/logger.dir/build.make CMakeFiles/logger.dir/depend
-	$(MAKE) -f CMakeFiles/logger.dir/build.make CMakeFiles/logger.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lennart/Nextcloud/dev/cla-collection/build/CMakeFiles --progress-num=1,2,3 "Built target logger"
-.PHONY : CMakeFiles/logger.dir/all
+CMakeFiles/readconfig.dir/all:
+	$(MAKE) -f CMakeFiles/readconfig.dir/build.make CMakeFiles/readconfig.dir/depend
+	$(MAKE) -f CMakeFiles/readconfig.dir/build.make CMakeFiles/readconfig.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lennart/Nextcloud/dev/cla-collection/build/CMakeFiles --progress-num=1,2,3,4 "Built target readconfig"
+.PHONY : CMakeFiles/readconfig.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/logger.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lennart/Nextcloud/dev/cla-collection/build/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/logger.dir/all
+CMakeFiles/readconfig.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lennart/Nextcloud/dev/cla-collection/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/readconfig.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/lennart/Nextcloud/dev/cla-collection/build/CMakeFiles 0
-.PHONY : CMakeFiles/logger.dir/rule
+.PHONY : CMakeFiles/readconfig.dir/rule
 
 # Convenience name for target.
-logger: CMakeFiles/logger.dir/rule
+readconfig: CMakeFiles/readconfig.dir/rule
 
-.PHONY : logger
+.PHONY : readconfig
 
 # clean rule for target.
-CMakeFiles/logger.dir/clean:
-	$(MAKE) -f CMakeFiles/logger.dir/build.make CMakeFiles/logger.dir/clean
-.PHONY : CMakeFiles/logger.dir/clean
+CMakeFiles/readconfig.dir/clean:
+	$(MAKE) -f CMakeFiles/readconfig.dir/build.make CMakeFiles/readconfig.dir/clean
+.PHONY : CMakeFiles/readconfig.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
