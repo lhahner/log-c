@@ -49,11 +49,7 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/home/lennart/Nextcloud/dev/cla-collection"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "/usr/local/include/libxml2"
+					"path" : "/etc/xml"
 				}
 			],
 			"language" : "C",

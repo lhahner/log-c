@@ -6,5 +6,5 @@ C_FLAGS = -g
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/lennart/Nextcloud/dev/cla-collection -I/usr/local/include/libxml2 
+C_INCLUDES = -I/etc/xml 
 

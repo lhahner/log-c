@@ -1,7 +1,8 @@
 {
   "files.associations": {
     "regex.h": "c",
-    "parser.h": "c"
+    "parser.h": "c",
+    "xmlmemory.h": "c"
   },
   "C_Cpp.errorSquiggles": "enabled"
 }

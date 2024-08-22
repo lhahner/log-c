@@ -8,16 +8,23 @@
  * @version 1.0
  * **********************************************************************/
 #include "../includes/libs.h"
-#include <libxml2/libxml/xmlversion.h>
+#include <libxml2/libxml/xmlmemory.h>
+#include <libxml2/libxml/parser.h>
 
 FILE *fconfig;
 char fbuf[BUFSIZ];
+xmlDocPtr doc;
+xmlNodePtr cur;
 
 int config2buffer();
 
 int main(int *argc, int *argv)
 {
-    config2buffer();
+    doc = xmlParseFile("../config/log2file.xml");
+    if (doc == NULL)
+    {
+        fprintf(stderr, "File Not found.");
+    }
 }
 
 /**
