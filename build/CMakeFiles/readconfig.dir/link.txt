@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/readconfig.dir/src/logger.c.o CMakeFiles/readconfig.dir/src/replacer.c.o CMakeFiles/readconfig.dir/src/readconfig.c.o  -o readconfig 
+/usr/bin/cc -g   CMakeFiles/readconfig.dir/src/logger.c.o CMakeFiles/readconfig.dir/src/replacer.c.o CMakeFiles/readconfig.dir/src/readconfig.c.o  -o readconfig  -Wl,-rpath,/usr/local/lib /usr/local/lib/libxml2.so 

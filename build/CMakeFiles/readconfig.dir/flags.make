@@ -6,5 +6,5 @@ C_FLAGS = -g
 
 C_DEFINES = 
 
-C_INCLUDES = -I/etc/xml 
+C_INCLUDES = -isystem /usr/local/include/libxml2 
 

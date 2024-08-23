@@ -38,7 +38,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "readconfig::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-readconfig-Debug-086fa5a9c1e1722a386a.json",
+					"jsonFile" : "target-readconfig-Debug-c0012bb4f7c475052d06.json",
 					"name" : "readconfig",
 					"projectIndex" : 0
 				}
@@ -48,8 +48,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/lennart/Nextcloud/dev/cla-collection/build",
-		"source" : "/home/lennart/Nextcloud/dev/cla-collection"
+		"build" : "/home/lennart/Dev/cla-collection/build",
+		"source" : "/home/lennart/Dev/cla-collection"
 	},
 	"version" : 
 	{

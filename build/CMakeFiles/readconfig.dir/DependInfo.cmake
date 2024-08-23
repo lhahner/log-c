@@ -4,15 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/lennart/Nextcloud/dev/cla-collection/src/logger.c" "/home/lennart/Nextcloud/dev/cla-collection/build/CMakeFiles/readconfig.dir/src/logger.c.o"
-  "/home/lennart/Nextcloud/dev/cla-collection/src/readconfig.c" "/home/lennart/Nextcloud/dev/cla-collection/build/CMakeFiles/readconfig.dir/src/readconfig.c.o"
-  "/home/lennart/Nextcloud/dev/cla-collection/src/replacer.c" "/home/lennart/Nextcloud/dev/cla-collection/build/CMakeFiles/readconfig.dir/src/replacer.c.o"
+  "/home/lennart/Dev/cla-collection/src/logger.c" "/home/lennart/Dev/cla-collection/build/CMakeFiles/readconfig.dir/src/logger.c.o"
+  "/home/lennart/Dev/cla-collection/src/readconfig.c" "/home/lennart/Dev/cla-collection/build/CMakeFiles/readconfig.dir/src/readconfig.c.o"
+  "/home/lennart/Dev/cla-collection/src/replacer.c" "/home/lennart/Dev/cla-collection/build/CMakeFiles/readconfig.dir/src/replacer.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
-  "/etc/xml"
+  "/usr/local/include/libxml2"
   )
 
 # Targets to which this target links.
