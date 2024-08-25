@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/lennart/Dev/cla-collection/includes/libs.h
+/home/lennart/Nextcloud/dev/cla-collection/includes/libs.h
 stdio.h
 -
 stdlib.h
@@ -20,35 +20,15 @@ ctype.h
 string.h
 -
 ./replacer.h
-/home/lennart/Dev/cla-collection/includes/replacer.h
+/home/lennart/Nextcloud/dev/cla-collection/includes/replacer.h
 
-/home/lennart/Dev/cla-collection/includes/loggerlib.h
-./libs.h
-/home/lennart/Dev/cla-collection/includes/libs.h
+/home/lennart/Nextcloud/dev/cla-collection/includes/replacer.h
 
-/home/lennart/Dev/cla-collection/includes/replacer.h
-
-/home/lennart/Dev/cla-collection/src/logger.c
+/home/lennart/Nextcloud/dev/cla-collection/src/readconfig.c
 ../includes/libs.h
-/home/lennart/Dev/cla-collection/includes/libs.h
-../includes/loggerlib.h
-/home/lennart/Dev/cla-collection/includes/loggerlib.h
-../includes/replacer.h
-/home/lennart/Dev/cla-collection/includes/replacer.h
-
-/home/lennart/Dev/cla-collection/src/readconfig.c
-../includes/libs.h
-/home/lennart/Dev/cla-collection/includes/libs.h
+/home/lennart/Nextcloud/dev/cla-collection/includes/libs.h
 libxml2/libxml/xmlmemory.h
 -
 libxml2/libxml/parser.h
 -
-
-/home/lennart/Dev/cla-collection/src/replacer.c
-../includes/libs.h
-/home/lennart/Dev/cla-collection/includes/libs.h
-regex.h
-/home/lennart/Dev/cla-collection/src/regex.h
-../includes/replacer.h
-/home/lennart/Dev/cla-collection/includes/replacer.h
 

@@ -1,0 +1,3 @@
+/home/lennart/Nextcloud/dev/cla-collection/CMakeFiles/edit_cache.dir
+/home/lennart/Nextcloud/dev/cla-collection/CMakeFiles/rebuild_cache.dir
+/home/lennart/Nextcloud/dev/cla-collection/CMakeFiles/readconfig.dir

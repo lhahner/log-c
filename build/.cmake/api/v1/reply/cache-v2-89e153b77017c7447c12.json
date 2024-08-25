@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/lennart/Dev/cla-collection/build"
+			"value" : "/home/lennart/Nextcloud/dev/cla-collection/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -1687,7 +1687,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/lennart/Dev/cla-collection/build"
+			"value" : "/home/lennart/Nextcloud/dev/cla-collection/build"
 		},
 		{
 			"name" : "cla-collection_SOURCE_DIR",
@@ -1699,7 +1699,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/lennart/Dev/cla-collection"
+			"value" : "/home/lennart/Nextcloud/dev/cla-collection"
 		},
 		{
 			"name" : "pkgcfg_lib_PC_LIBXML_xml2",

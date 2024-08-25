@@ -165,8 +165,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/home/lennart/Dev/cla-collection/build",
-		"source" : "/home/lennart/Dev/cla-collection"
+		"build" : "/home/lennart/Nextcloud/dev/cla-collection/build",
+		"source" : "/home/lennart/Nextcloud/dev/cla-collection"
 	},
 	"version" : 
 	{
