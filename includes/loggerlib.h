@@ -2,5 +2,5 @@
 
 int signal_handler();
 void log2File(char *stream);
-char *formatLogLine(char *message_type, char *message);
-int log2buffer(FILE *file, char *stream);
+char *formatDefaultLogLine(char *message_type, char *message);
+void log2Console(char *message);

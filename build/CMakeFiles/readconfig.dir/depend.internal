@@ -8,6 +8,7 @@ CMakeFiles/readconfig.dir/src/logger.c.o
  /home/lennart/Nextcloud/dev/cla-collection/src/logger.c
 CMakeFiles/readconfig.dir/src/readconfig.c.o
  /home/lennart/Nextcloud/dev/cla-collection/includes/libs.h
+ /home/lennart/Nextcloud/dev/cla-collection/includes/loggerlib.h
  /home/lennart/Nextcloud/dev/cla-collection/includes/replacer.h
  /home/lennart/Nextcloud/dev/cla-collection/src/readconfig.c
 CMakeFiles/readconfig.dir/src/replacer.c.o

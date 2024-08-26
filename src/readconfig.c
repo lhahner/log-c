@@ -8,6 +8,7 @@
  * @version 1.0
  * **********************************************************************/
 #include "../includes/libs.h"
+#include "../includes/loggerlib.h"
 #include <libxml2/libxml/xmlmemory.h>
 #include <libxml2/libxml/parser.h>
 
@@ -39,7 +40,8 @@ int main(int *argc, int *argv)
  * It should definied in a certain way,
  * so the reading of the document can be done.
  *
- * @return 1 if an the structure is not correct.
+ * @return -1 if an the structure is not correct.
+ * @return 1 if $default flag is active.
  */
 int checkXmlStructure(xmlDocPtr doc)
 {
@@ -48,6 +50,7 @@ int checkXmlStructure(xmlDocPtr doc)
     {
         fprintf(stderr, "No root Element found in XML-File.");
         xmlFreeDoc(doc);
+        return -1;
     }
     else
     {
@@ -60,6 +63,13 @@ int checkXmlStructure(xmlDocPtr doc)
                 cur = cur->next;
             }
             createLogFile(cur);
+            if (cur->children != NULL)
+            {
+                if (strcmp((const char *)cur->children->next->properties, "$default"))
+                {
+                    return 0;
+                }
+            }
         }
     }
 }

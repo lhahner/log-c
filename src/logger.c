@@ -29,11 +29,10 @@ int signal_handler()
     exit;
 }
 
-// a stream is just a contious stream of characters
-// int main(int *argc, int *argv)
-// {
-//     log2File("Compliation Error, Aborting...");
-// }
+void log2Console(char *message)
+{
+    //....
+}
 
 /**
  * This function calls the default formatter
@@ -51,7 +50,7 @@ void log2File(char *stream)
     else
     {
         fptr = fopen("../res/error.log", "w+");
-        const char *logline = formatLogLine("[ERROR]", stream);
+        const char *logline = formatDefaultLogLine("[ERROR]", stream);
         fputs(logline, fptr);
         fclose(fptr);
     }
@@ -66,7 +65,7 @@ void log2File(char *stream)
  * @param message the output message specified by the user
  * @return formatted log string which consitst of message type, message and date.
  */
-char *formatLogLine(char *message_type, char *message)
+char *formatDefaultLogLine(char *message_type, char *message)
 {
     // Format -> [<message_type>] -- <message>
     char *log_line = malloc(256);

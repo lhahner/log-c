@@ -7,6 +7,7 @@ CMakeFiles/readconfig.dir/src/logger.c.o: ../includes/replacer.h
 CMakeFiles/readconfig.dir/src/logger.c.o: ../src/logger.c
 
 CMakeFiles/readconfig.dir/src/readconfig.c.o: ../includes/libs.h
+CMakeFiles/readconfig.dir/src/readconfig.c.o: ../includes/loggerlib.h
 CMakeFiles/readconfig.dir/src/readconfig.c.o: ../includes/replacer.h
 CMakeFiles/readconfig.dir/src/readconfig.c.o: ../src/readconfig.c
 

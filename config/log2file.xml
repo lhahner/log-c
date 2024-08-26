@@ -1,10 +1,10 @@
 <configuration>
     <categorie type="Error">
         <Console>
-            <PatternLayout pattern=""/>
+            <PatternLayout pattern="$default"/>
         </Console>
         <File path="../logs/error.log">
-            <PatternLayout pattern=""/>
+            <PatternLayout pattern="$default"/>
         </File>
     </categorie>
     <categorie type="Warning">
@@ -12,15 +12,15 @@
             <PatternLayout pattern=""/>
         </Console>
         <File path="../logs/warnings.log">
-            <PatternLayout pattern=""/>
+            <PatternLayout pattern="$default"/>
         </File>
     </categorie>
     <categorie type="Info">
         <Console>
-            <PatternLayout pattern=""/>
+            <PatternLayout pattern="$default"/>
         </Console>
         <File path="../logs/infos.log">
-            <PatternLayout pattern=""/>
+            <PatternLayout pattern="$default"/>
         </File>
     </categorie>
 </configuration>
