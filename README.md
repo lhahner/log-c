@@ -3,6 +3,8 @@
 This is a collection of programs for cross-cutting concerns in C. This means all these programs should handle expected functionalities as logging, error-handling or other.
 The Road-Map below is [CLA-Associate ]{https://cppinstitute.org/cla}
 
+One of the cross-cutteing concerns is logging. This program should implement an easy and custimzable logger in C.
+
 ## Files and streams
 
 - **Files vs. streams**: Files are stored data which is physically written on the disk, while streams are just runtime values stored in a variable.
