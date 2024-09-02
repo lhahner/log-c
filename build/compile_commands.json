@@ -4,11 +4,13 @@
   "command": "/usr/bin/cc  -isystem /usr/local/include/libxml2  -g   -o CMakeFiles/readconfig.dir/src/logger.c.o   -c /home/lennart/Nextcloud/dev/cla-collection/src/logger.c",
   "file": "/home/lennart/Nextcloud/dev/cla-collection/src/logger.c"
 },
+
 {
   "directory": "/home/lennart/Nextcloud/dev/cla-collection/build",
   "command": "/usr/bin/cc  -isystem /usr/local/include/libxml2  -g   -o CMakeFiles/readconfig.dir/src/replacer.c.o   -c /home/lennart/Nextcloud/dev/cla-collection/src/replacer.c",
   "file": "/home/lennart/Nextcloud/dev/cla-collection/src/replacer.c"
 },
+
 {
   "directory": "/home/lennart/Nextcloud/dev/cla-collection/build",
   "command": "/usr/bin/cc  -isystem /usr/local/include/libxml2  -g   -o CMakeFiles/readconfig.dir/src/readconfig.c.o   -c /home/lennart/Nextcloud/dev/cla-collection/src/readconfig.c",

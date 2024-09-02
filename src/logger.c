@@ -12,6 +12,8 @@
 #include "../includes/libs.h"
 #include "../includes/loggerlib.h"
 #include "../includes/replacer.h"
+#include <libxml2/libxml/xmlmemory.h>
+#include <libxml2/libxml/parser.h>
 
 char buffer[BUFSIZ];
 FILE *fptr;
@@ -29,9 +31,26 @@ int signal_handler()
     exit;
 }
 
-void log2Console(char *message)
+/**
+ * This function logs to the console.
+ * It uses the configuration file to define a format
+ * for the logging.
+ *
+ *
+ * @param message The message that should be displayed
+ *
+ */
+void log2Console(char *type, char *message)
 {
-    //....
+    xmlDocPtr doc = xmlParseFile("../config/log2file.xml");
+    if (doc == NULL)
+    {
+        fprintf(stderr, "File Not found.");
+    }
+    else
+    {
+        checkXmlStructure(doc);
+    }
 }
 
 /**

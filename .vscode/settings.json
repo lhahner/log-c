@@ -3,7 +3,8 @@
     "regex.h": "c",
     "parser.h": "c",
     "xmlmemory.h": "c",
-    "libs.h": "c"
+    "libs.h": "c",
+    "loggerlib.h": "c"
   },
   "C_Cpp.errorSquiggles": "enabled"
 }

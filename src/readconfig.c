@@ -21,10 +21,13 @@ int config2buffer();
 int checkXmlStructure(xmlDocPtr doc);
 int countChildren(xmlNodePtr cur);
 FILE *createLogFile(xmlNodePtr cur);
+xmlNodePtr jumpToTypeNode(xmlNodePtr cur, char *typeNode);
+xmlNodePtr checkFileNode(xmlNodePtr cur);
+xmlNodePtr checkCategorieNode(xmlNodePtr cur, char *type);
 
-int main(int *argc, int *argv)
+int main()
 {
-    doc = xmlParseFile("../config/log2file.xml");
+    xmlDocPtr doc = xmlParseFile("../config/log2file.xml");
     if (doc == NULL)
     {
         fprintf(stderr, "File Not found.");
@@ -54,24 +57,64 @@ int checkXmlStructure(xmlDocPtr doc)
     }
     else
     {
+        // Check root node
         if (xmlStrcmp(cur->name, (const xmlChar *)"configuration") >= 0)
         {
-            // iterate over xml and create file at expected path.
-            cur = cur->children->next->children->next;
-            while (strcmp((const char *)cur->name, "File") != 0)
-            {
-                cur = cur->next;
-            }
-            createLogFile(cur);
+
             if (cur->children != NULL)
             {
+                checkCategorieNode(cur, "Info");
+                createLogFile(checkFileNode(cur));
                 if (strcmp((const char *)cur->children->next->properties, "$default"))
                 {
+
                     return 0;
                 }
             }
         }
     }
+}
+
+/**
+ * This method will return the File-Node
+ * which includes the path as an attribute.
+ *
+ * @param cur the starting element.
+ * @return the Element with File Node.
+ */
+xmlNodePtr checkFileNode(xmlNodePtr cur)
+{
+    xmlNodePtr tmp = malloc(sizeof(cur));
+    tmp = cur;
+    // iterate over xml and create file at expected path.
+    tmp = tmp->children->next->children->next;
+    while (strcmp((const char *)tmp->name, "File") != 0)
+    {
+        tmp = tmp->next;
+    }
+    return tmp;
+}
+
+/**
+ * This method will return the categorie-Node
+ * which includes the log-type as an attribute.
+ *
+ * @param cur the starting element.
+ * @return the Element with type Attribute.
+ */
+xmlNodePtr checkCategorieNode(xmlNodePtr cur, char *type)
+{
+    xmlNodePtr tmp = malloc(sizeof(cur));
+    tmp = cur->children->next;
+    while (tmp != NULL)
+    {
+        if (tmp->properties != NULL && strcmp((const char *)tmp->properties->children->content, type) == 0)
+        {
+            return tmp;
+        }
+        tmp = tmp->next;
+    }
+    return NULL;
 }
 
 /**

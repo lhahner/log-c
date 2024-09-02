@@ -31,57 +31,73 @@ include rules.ninja
 
 
 #############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/lennart/Nextcloud/dev/cla-collection/build && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/lennart/Dev/cla-collection/build && /usr/bin/cmake -S/home/lennart/Dev/cla-collection -B/home/lennart/Dev/cla-collection/build
+  COMMAND = cd /home/lennart/Nextcloud/dev/cla-collection/build && /usr/bin/cmake -S/home/lennart/Nextcloud/dev/cla-collection -B/home/lennart/Nextcloud/dev/cla-collection/build
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
+# =============================================================================
+# Object build statements for EXECUTABLE target readconfig
+
 
 #############################################
-# Utility command for edit_cache
+# Order-only phony target for readconfig
 
-build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/lennart/Dev/cla-collection/build && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-  DESC = No interactive CMake dialog available...
-  restat = 1
+build cmake_object_order_depends_target_readconfig: phony || CMakeFiles/readconfig.dir
 
-build edit_cache: phony CMakeFiles/edit_cache.util
+build CMakeFiles/readconfig.dir/src/logger.c.o: C_COMPILER__readconfig ../src/logger.c || cmake_object_order_depends_target_readconfig
+  DEP_FILE = CMakeFiles/readconfig.dir/src/logger.c.o.d
+  FLAGS = -g
+  INCLUDES = -isystem /usr/local/include/libxml2
+  OBJECT_DIR = CMakeFiles/readconfig.dir
+  OBJECT_FILE_DIR = CMakeFiles/readconfig.dir/src
+
+build CMakeFiles/readconfig.dir/src/replacer.c.o: C_COMPILER__readconfig ../src/replacer.c || cmake_object_order_depends_target_readconfig
+  DEP_FILE = CMakeFiles/readconfig.dir/src/replacer.c.o.d
+  FLAGS = -g
+  INCLUDES = -isystem /usr/local/include/libxml2
+  OBJECT_DIR = CMakeFiles/readconfig.dir
+  OBJECT_FILE_DIR = CMakeFiles/readconfig.dir/src
+
+build CMakeFiles/readconfig.dir/src/readconfig.c.o: C_COMPILER__readconfig ../src/readconfig.c || cmake_object_order_depends_target_readconfig
+  DEP_FILE = CMakeFiles/readconfig.dir/src/readconfig.c.o.d
+  FLAGS = -g
+  INCLUDES = -isystem /usr/local/include/libxml2
+  OBJECT_DIR = CMakeFiles/readconfig.dir
+  OBJECT_FILE_DIR = CMakeFiles/readconfig.dir/src
+
 
 # =============================================================================
-# Object build statements for EXECUTABLE target replacer
+# Link build statements for EXECUTABLE target readconfig
 
 
 #############################################
-# Order-only phony target for replacer
+# Link the executable readconfig
 
-build cmake_object_order_depends_target_replacer: phony || CMakeFiles/replacer.dir
-
-build CMakeFiles/replacer.dir/src/replacer.c.o: C_COMPILER__replacer ../src/replacer.c || cmake_object_order_depends_target_replacer
-  DEP_FILE = CMakeFiles/replacer.dir/src/replacer.c.o.d
+build readconfig: C_EXECUTABLE_LINKER__readconfig CMakeFiles/readconfig.dir/src/logger.c.o CMakeFiles/readconfig.dir/src/replacer.c.o CMakeFiles/readconfig.dir/src/readconfig.c.o | /usr/local/lib/libxml2.so
   FLAGS = -g
-  OBJECT_DIR = CMakeFiles/replacer.dir
-  OBJECT_FILE_DIR = CMakeFiles/replacer.dir/src
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target replacer
-
-
-#############################################
-# Link the executable replacer
-
-build replacer: C_EXECUTABLE_LINKER__replacer CMakeFiles/replacer.dir/src/replacer.c.o
-  FLAGS = -g
-  OBJECT_DIR = CMakeFiles/replacer.dir
+  LINK_LIBRARIES = -Wl,-rpath,/usr/local/lib  /usr/local/lib/libxml2.so
+  OBJECT_DIR = CMakeFiles/readconfig.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = replacer
-  TARGET_PDB = replacer.dbg
+  TARGET_FILE = readconfig
+  TARGET_PDB = readconfig.dbg
 
 # =============================================================================
 # Target aliases.
@@ -92,9 +108,9 @@ build replacer: C_EXECUTABLE_LINKER__replacer CMakeFiles/replacer.dir/src/replac
 # =============================================================================
 
 #############################################
-# Folder: /home/lennart/Dev/cla-collection/build
+# Folder: /home/lennart/Nextcloud/dev/cla-collection/build
 
-build all: phony replacer
+build all: phony readconfig
 
 # =============================================================================
 # Built-in targets
@@ -108,14 +124,14 @@ default all
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /usr/share/cmake-3.16/Modules/CMakeCInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/share/cmake-3.16/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.16/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.16/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.16/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.16/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU.cmake /usr/share/cmake-3.16/Modules/Internal/CMakeCheckCompilerFlag.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.16/Modules/Platform/Linux.cmake /usr/share/cmake-3.16/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.16.3/CMakeCCompiler.cmake CMakeFiles/3.16.3/CMakeCXXCompiler.cmake CMakeFiles/3.16.3/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /usr/share/cmake-3.16/Modules/CMakeCInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/share/cmake-3.16/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.16/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.16/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.16/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.16/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU.cmake /usr/share/cmake-3.16/Modules/FindLibXml2.cmake /usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.16/Modules/FindPackageMessage.cmake /usr/share/cmake-3.16/Modules/FindPkgConfig.cmake /usr/share/cmake-3.16/Modules/Internal/CMakeCheckCompilerFlag.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.16/Modules/Platform/Linux.cmake /usr/share/cmake-3.16/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.16.3/CMakeCCompiler.cmake CMakeFiles/3.16.3/CMakeCXXCompiler.cmake CMakeFiles/3.16.3/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt /usr/share/cmake-3.16/Modules/CMakeCInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/share/cmake-3.16/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.16/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.16/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.16/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.16/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU.cmake /usr/share/cmake-3.16/Modules/Internal/CMakeCheckCompilerFlag.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.16/Modules/Platform/Linux.cmake /usr/share/cmake-3.16/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.16.3/CMakeCCompiler.cmake CMakeFiles/3.16.3/CMakeCXXCompiler.cmake CMakeFiles/3.16.3/CMakeSystem.cmake: phony
+build ../CMakeLists.txt /usr/share/cmake-3.16/Modules/CMakeCInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.16/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/share/cmake-3.16/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.16/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.16/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.16/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.16/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.16/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.16/Modules/Compiler/GNU.cmake /usr/share/cmake-3.16/Modules/FindLibXml2.cmake /usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.16/Modules/FindPackageMessage.cmake /usr/share/cmake-3.16/Modules/FindPkgConfig.cmake /usr/share/cmake-3.16/Modules/Internal/CMakeCheckCompilerFlag.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.16/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.16/Modules/Platform/Linux.cmake /usr/share/cmake-3.16/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.16.3/CMakeCCompiler.cmake CMakeFiles/3.16.3/CMakeCXXCompiler.cmake CMakeFiles/3.16.3/CMakeSystem.cmake: phony
 
 
 #############################################
