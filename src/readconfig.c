@@ -21,21 +21,12 @@ int config2buffer();
 int checkXmlStructure(xmlDocPtr doc);
 int countChildren(xmlNodePtr cur);
 FILE *createLogFile(xmlNodePtr cur);
-xmlNodePtr jumpToTypeNode(xmlNodePtr cur, char *typeNode);
 xmlNodePtr checkFileNode(xmlNodePtr cur);
 xmlNodePtr checkCategorieNode(xmlNodePtr cur, char *type);
 
 int main()
 {
-    xmlDocPtr doc = xmlParseFile("../config/log2file.xml");
-    if (doc == NULL)
-    {
-        fprintf(stderr, "File Not found.");
-    }
-    else
-    {
-        checkXmlStructure(doc);
-    }
+    log2Console("Error", "No Data Found for this item.");
 }
 
 /**
@@ -63,16 +54,20 @@ int checkXmlStructure(xmlDocPtr doc)
 
             if (cur->children != NULL)
             {
-                checkCategorieNode(cur, "Info");
+                // TODO
+                // identify which type of logging the user wants, and afterwards
+                // check for logging pattern.
+                cur = checkCategorieNode(cur, "Info");
                 createLogFile(checkFileNode(cur));
-                if (strcmp((const char *)cur->children->next->properties, "$default"))
-                {
 
-                    return 0;
+                if (strcmp((const char *)cur->children->next->children->next->properties->children->content, "$default") == 0)
+                {
+                    return 1;
                 }
             }
         }
     }
+    return -1;
 }
 
 /**
@@ -85,13 +80,12 @@ int checkXmlStructure(xmlDocPtr doc)
 xmlNodePtr checkFileNode(xmlNodePtr cur)
 {
     xmlNodePtr tmp = malloc(sizeof(cur));
-    tmp = cur;
-    // iterate over xml and create file at expected path.
-    tmp = tmp->children->next->children->next;
+    tmp = cur->children;
     while (strcmp((const char *)tmp->name, "File") != 0)
     {
         tmp = tmp->next;
     }
+    free(tmp);
     return tmp;
 }
 
@@ -114,6 +108,7 @@ xmlNodePtr checkCategorieNode(xmlNodePtr cur, char *type)
         }
         tmp = tmp->next;
     }
+    free(tmp);
     return NULL;
 }
 
@@ -155,6 +150,7 @@ int countChildren(xmlNodePtr cur)
         tmp = tmp->next;
         childrenCounter++;
     }
+    free(tmp);
     return childrenCounter;
 }
 
@@ -180,5 +176,6 @@ int config2buffer()
         {
             strcat(fbuf, tmp);
         }
+        free(tmp);
     }
 }

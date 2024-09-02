@@ -20,6 +20,18 @@ FILE *fptr;
 sig_atomic_t sig = 0;
 
 /**
+ * @todo
+ * Should be used in the future instead of char*
+ * for warnings.
+ */
+enum type
+{
+    ERROR = 0,
+    WARNING = 1,
+    INFO = 2
+};
+
+/**
  * Signal handling if detected.
  *
  * @return exits program
@@ -45,11 +57,20 @@ void log2Console(char *type, char *message)
     xmlDocPtr doc = xmlParseFile("../config/log2file.xml");
     if (doc == NULL)
     {
+        raise(SIGIO);
         fprintf(stderr, "File Not found.");
     }
     else
     {
-        checkXmlStructure(doc);
+        if (checkXmlStructure(doc) == 1)
+        {
+            formatDefaultLogLine(type, message);
+        }
+        else
+        {
+            fprintf(stderr, "Error while defining format.");
+            return;
+        }
     }
 }
 
@@ -141,5 +162,6 @@ char *formatDefaultLogLine(char *message_type, char *message)
         raise(SIGABRT);
     }
 
+    printf("%s", log_line);
     return log_line;
 }

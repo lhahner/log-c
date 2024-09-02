@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/logger.dir/src/logger.c.o CMakeFiles/logger.dir/src/replacer.c.o CMakeFiles/logger.dir/src/readconfig.c.o  -o logger  -Wl,-rpath,/usr/local/lib /usr/local/lib/libxml2.so 

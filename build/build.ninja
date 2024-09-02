@@ -61,13 +61,6 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build cmake_object_order_depends_target_readconfig: phony || CMakeFiles/readconfig.dir
 
-build CMakeFiles/readconfig.dir/src/logger.c.o: C_COMPILER__readconfig ../src/logger.c || cmake_object_order_depends_target_readconfig
-  DEP_FILE = CMakeFiles/readconfig.dir/src/logger.c.o.d
-  FLAGS = -g
-  INCLUDES = -isystem /usr/local/include/libxml2
-  OBJECT_DIR = CMakeFiles/readconfig.dir
-  OBJECT_FILE_DIR = CMakeFiles/readconfig.dir/src
-
 build CMakeFiles/readconfig.dir/src/replacer.c.o: C_COMPILER__readconfig ../src/replacer.c || cmake_object_order_depends_target_readconfig
   DEP_FILE = CMakeFiles/readconfig.dir/src/replacer.c.o.d
   FLAGS = -g
@@ -82,6 +75,13 @@ build CMakeFiles/readconfig.dir/src/readconfig.c.o: C_COMPILER__readconfig ../sr
   OBJECT_DIR = CMakeFiles/readconfig.dir
   OBJECT_FILE_DIR = CMakeFiles/readconfig.dir/src
 
+build CMakeFiles/readconfig.dir/src/logger.c.o: C_COMPILER__readconfig ../src/logger.c || cmake_object_order_depends_target_readconfig
+  DEP_FILE = CMakeFiles/readconfig.dir/src/logger.c.o.d
+  FLAGS = -g
+  INCLUDES = -isystem /usr/local/include/libxml2
+  OBJECT_DIR = CMakeFiles/readconfig.dir
+  OBJECT_FILE_DIR = CMakeFiles/readconfig.dir/src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target readconfig
@@ -90,7 +90,7 @@ build CMakeFiles/readconfig.dir/src/readconfig.c.o: C_COMPILER__readconfig ../sr
 #############################################
 # Link the executable readconfig
 
-build readconfig: C_EXECUTABLE_LINKER__readconfig CMakeFiles/readconfig.dir/src/logger.c.o CMakeFiles/readconfig.dir/src/replacer.c.o CMakeFiles/readconfig.dir/src/readconfig.c.o | /usr/local/lib/libxml2.so
+build readconfig: C_EXECUTABLE_LINKER__readconfig CMakeFiles/readconfig.dir/src/replacer.c.o CMakeFiles/readconfig.dir/src/readconfig.c.o CMakeFiles/readconfig.dir/src/logger.c.o | /usr/local/lib/libxml2.so
   FLAGS = -g
   LINK_LIBRARIES = -Wl,-rpath,/usr/local/lib  /usr/local/lib/libxml2.so
   OBJECT_DIR = CMakeFiles/readconfig.dir
