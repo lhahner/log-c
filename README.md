@@ -5,7 +5,9 @@ The Road-Map below is [CLA-Associate ]{https://cppinstitute.org/cla}
 
 One of the cross-cutteing concerns is logging. This program should implement an easy and custimzable logger in C.
 Surely there are multiple implementations that cover logging in C and this is just an alternative.
-It takes the really good practices of log4j and implements them in C, like having a customizable logging file.
+It takes the really good practices of log4j and implements them in C, like having a customizable logging file or implement it in C and in Shell-Skript.
+https://mvnrepository.com/artifact/log4j/log4j.
+
 
 ## TODOs
 
