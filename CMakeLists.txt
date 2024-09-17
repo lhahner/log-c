@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(cla-collection)
+project(logc)
 find_package(LibXml2 REQUIRED)
-add_executable(readconfig src/replacer.c src/readconfig.c src/logger.c)
-target_link_libraries(readconfig PUBLIC LibXml2::LibXml2)
+add_executable(logc src/main.c src/replacer.c src/readconfig.c src/logger.c)
+target_link_libraries(logc PUBLIC LibXml2::LibXml2)

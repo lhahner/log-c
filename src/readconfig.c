@@ -24,11 +24,6 @@ FILE *createLogFile(xmlNodePtr cur);
 xmlNodePtr checkFileNode(xmlNodePtr cur);
 xmlNodePtr checkCategorieNode(xmlNodePtr cur, char *type);
 
-int main()
-{
-    log2Console("Error", "No Data Found for this item.");
-}
-
 /**
  * Checks the Structure of the XML-Document.
  * It should definied in a certain way,

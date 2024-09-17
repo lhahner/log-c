@@ -162,6 +162,6 @@ char *formatDefaultLogLine(char *message_type, char *message)
         raise(SIGABRT);
     }
 
-    printf("%s", log_line);
+    printf("%s\n", log_line);
     return log_line;
 }

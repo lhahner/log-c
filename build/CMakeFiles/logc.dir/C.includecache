@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/lennart.hahner/Nextcloud/dev/logc/includes/libs.h
+stdio.h
+-
+stdlib.h
+-
+signal.h
+-
+time.h
+-
+ctype.h
+-
+string.h
+-
+./replacer.h
+/mnt/c/Users/lennart.hahner/Nextcloud/dev/logc/includes/replacer.h
+
+/mnt/c/Users/lennart.hahner/Nextcloud/dev/logc/includes/replacer.h
+
+/mnt/c/Users/lennart.hahner/Nextcloud/dev/logc/src/main.c
+../includes/libs.h
+/mnt/c/Users/lennart.hahner/Nextcloud/dev/logc/includes/libs.h
+

@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/logc.dir/src/main.c.o CMakeFiles/logc.dir/src/replacer.c.o CMakeFiles/logc.dir/src/readconfig.c.o CMakeFiles/logc.dir/src/logger.c.o -o logc  /usr/lib/x86_64-linux-gnu/libxml2.so 
