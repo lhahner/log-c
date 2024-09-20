@@ -27,3 +27,8 @@ Further Development definied as User-Stories on this logging program:
 
 As a Linux User I want to configure the logger.xml file in `/etc/logc/` file, to
 have a default place where to check regarding the configuration file.
+
+### Differentiate the pattern `dated` and ``default`
+
+As a user I want to have the choice to either log a message with the date or without to
+have a flexible design.
