@@ -64,6 +64,9 @@ void log2Console(char *type, char *message)
     {
         if (checkXmlStructure(doc) == 1)
         {
+            for(int i = 0; i<strlen(type); i++){
+                type[i] = toupper(type[i]);
+            }
             formatDefaultLogLine(type, message);
         }
         else
@@ -114,7 +117,9 @@ char *formatDefaultLogLine(char *message_type, char *message)
     time_t rawtime = time(NULL);
 
     // use-case for replacer.c
-    char *time = asctime(gmtime(&rawtime));
+    struct tm * ptm = localtime(&rawtime);
+    ptm->tm_hour+1;
+    char *time = asctime(ptm);  
     time = replace('\n', ' ', time);
 
     // 0 -> "2", 1 -> "0", 2 -> ":", 3 -> "5", 4 -> "3"

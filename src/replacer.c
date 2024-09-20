@@ -17,10 +17,6 @@
 #include "regex.h"
 #include "../includes/replacer.h"
 
-#define TESTCASE_1 "Hello World \n";
-#define TESTCASE_2 "Hallo";
-#define SIZE 256;
-
 /**
  * @param regex regularexpression which should be matched against and replaced
  * @param n_str replacement string.
