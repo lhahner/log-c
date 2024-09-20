@@ -8,23 +8,22 @@ Surely there are multiple implementations that cover logging in C and this is ju
 It takes the really good practices of log4j and implements them in C, like having a customizable logging file or implement it in C and in Shell-Skript.
 https://mvnrepository.com/artifact/log4j/log4j.
 
+## How to use logc
+
+With the logging configuration file you can specify the pattern how the logging text should look.
+Also it is possible to use logc for file logging or console logging.
+For basic console logging use the following syntax:
+
+`logc <log-type> <log-message>`
+
+The `<log-type>`can either be error, warning and info. 
+For `<log-message>` any string that represents a message is possible.
 
 ## TODOs
 
 Further Development definied as User-Stories on this logging program:
 
-### Use as a formatter of logs in `bash` (implemented)
-
-As a Linux User I want to run the program like: `logc "openssh is not installed, error"` to
-recieve the output in the stdout like my specification in the configuration file. Like
-`[ERROR] -- 16.09.2024 -- openssh is not installed`.
-
 ### Implement the configuration in GNU/Linux Operating System
 
 As a Linux User I want to configure the logger.xml file in `/etc/logc/` file, to
 have a default place where to check regarding the configuration file.
-
-### Fix the time error
-
-As a user I want that the program checks in which timezone I am currently located
-and log the time accordingly, to use the program all over the world.
