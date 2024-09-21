@@ -32,3 +32,4 @@ have a default place where to check regarding the configuration file.
 
 As a user I want to have the choice to either log a message with the date or without to
 have a flexible design.
+Use a struct as the representation of the log line of the console.
