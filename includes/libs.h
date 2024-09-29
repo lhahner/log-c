@@ -6,3 +6,8 @@
 #include <ctype.h>
 #include <string.h>
 #include "./replacer.h"
+
+// Check if the program is compilied with gcc
+#ifdef __GNUC__
+//...
+#endif

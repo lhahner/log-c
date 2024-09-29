@@ -4,7 +4,8 @@
     "parser.h": "c",
     "xmlmemory.h": "c",
     "libs.h": "c",
-    "loggerlib.h": "c"
+    "loggerlib.h": "c",
+    "stdio.h": "c"
   },
   "C_Cpp.errorSquiggles": "enabled"
 }
