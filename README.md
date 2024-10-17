@@ -19,7 +19,7 @@ For basic console logging use the following syntax:
 The `<log-type>`can either be error, warning and info. 
 For `<log-message>` any string that represents a message is possible.
 
-## TODOs
+## Further implementations
 
 Further Development definied as User-Stories on this logging program:
 
